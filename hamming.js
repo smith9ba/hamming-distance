@@ -9,17 +9,17 @@ compute = function(strand1, strand2) {
 	//If strands are unequal in length
 	if (strand1.length !== strand2.length) {
 		//Then show an error
-		throw new Error ('DNA strands must be of equal length');
+		throw new Error ('DNA strands must be of equal length.');
 	};
 
 	//Initialze output variable for the Hamming distance
 	//It starts at zero, showing they are identical strands
 	var distance = 0;
 
-	for (var i = 0; i < strand1.length, i += 1) {
-			if (strand1.charAt(i) !== strand2.charAt(i)) {
-			dist += 1;
-		}
+	for (var i = 0; i < strand1.length; i += 1) {
+		if (strand1.charAt(i) !== strand2.charAt(i)) {
+		distance += 1;
+		};
 	};
 
 	return distance;
